@@ -1,0 +1,8 @@
+//color
+$color-red: #bc0000;
+
+//vw関数
+@function vw($pixelSize, $baseWidth:1080) {
+  @return calc($pixelSize / $baseWidth * 100vw);
+}
+

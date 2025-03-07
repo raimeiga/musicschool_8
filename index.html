@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>きたむらミュージックスクール</title>
+  <meta name="description" content="きたむらミュージックスクールの説明">
+
+  <!-- ファビコン設定 -->
+  <link rel="icon" href="images/favicon.ico">
+   
+  <!-- リセットCSS -->
+  <link rel="stylesheet" href="css/reset.css"> 
+  <!-- スタイルシート　-->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- google fonts読み込み -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+<header>
+  <div class="l-header">
+    <a class="l-header__logo l-header-logo">
+      <div class="l-header-logo__img">
+        <picture>
+          <source media="(max-width: 767px)" srcset="./images/logo-red-sp.svg">
+          <img src="./images/logo-red-pc.svg" alt="">
+        </picture>        
+      </div>
+      <div class="l-header__text">
+        <h1>きたむら<br class="pc"><span>ミュージックスクール</span></h1>
+      </div>
+     </a>
+     
+     <div class="l-header__right">
+       <div class="c-hamburger sp">
+         <div class="c-hamburger__inner">
+           <span></span>
+           <span></span>
+           <span></span>
+         </div>
+       </div>
+
+       <nav class="l-header__nav l-header-nav">
+         <ul class="l-header-nav__lists">
+           <li class="l-header-nav__list">
+             <a href="">料金</a>
+           </li>
+           <li class="l-header-nav__list">
+             <a href="">ブログ</a>
+           </li>
+           <li class="l-header-nav__list">
+             <a href="">卒業実績</a>
+           </li>
+         </ul>
+       </nav>
+       <a href="" class="c-btn c-btn--header pc">お問い合わせ</a>
+
+     </div>
+
+  </div>
+
+</header>
+
+
+
+
+  <!--jQueryの読み込み --> 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <!-- javascriptの読み込み -->
+  <script src="./js/main.js"> </script>
+</body>
+</html>

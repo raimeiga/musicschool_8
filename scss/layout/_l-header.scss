@@ -1,0 +1,165 @@
+@use '../foundation/mixin' as *;
+@use '../foundation/variable' as *;
+
+.l-header {
+ background-color: yellow;
+ width: 100%;
+ height: 8rem;
+ position: fixed;
+ top: 0;
+ left: 0;
+ padding-inline: 10rem;
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ @include sp {
+   height: 5rem;
+   padding-inline: 2rem 0;
+ }
+}
+
+.l-header__logo {
+ height: inherit;
+ background-color: aqua;
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+}
+
+.l-header-logo__img {
+ width: 3.3rem;
+ padding-top: 9px;
+ @include sp {
+   width: 2rem;
+ }
+}
+
+.l-header__text {
+ padding-top: 2px;
+ padding-left: 6px;
+ padding: 0.5rem 0 0 0.9rem;
+}
+
+.l-header__text h1 {
+ font-size: 2rem;
+ line-height: calc(23 / 20);
+ @include sp {
+   font-size: 1.3rem;
+   line-height: calc(14 / 13);
+ }
+}
+
+.l-header__text h1 span {
+ font-size: 1.5rem;
+ line-height: calc(23 / 15);
+ @include sp {
+  font-size: 1.3rem;
+  line-height: calc(14 / 13);
+}
+}
+
+
+//--------------------------------
+.l-header__right {
+ height: inherit;
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ column-gap: 3.3rem;
+ @include sp {
+  column-gap: 0;
+ } 
+}
+
+.l-header-nav__lists {
+ height: inherit;
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ column-gap: 3.3rem;
+ @include sp {
+  flex-direction: column;
+  position: fixed;
+  top: 5rem;
+  right: -120%;
+  transition: right .4s;
+ }
+}
+
+.l-header-nav__lists.active {
+ right: 0;
+}
+
+
+
+.l-header-nav__list {
+ height: inherit;
+}
+
+.l-header-nav__list a {
+ background-color: aqua;
+ display: block;
+ padding-block: 3.4rem 2.9rem;
+ font-size: 1.7rem;
+ line-height: 1;
+ transition: opacity .4s;
+ position: relative;
+ @include sp {
+   background-color: $color-red;  
+   width: 30rem;
+   height: 5.8rem;
+   padding: 2rem;
+   color: #fff;
+   font-size: 1.8rem;
+   line-height: 1; 
+   transition: background-color .4s;
+ }
+}
+
+.l-header-nav__list a:hover {
+  @include pc {
+    opacity: 0.5;
+  }
+  @include sp {
+    background-color: #000;  
+  } 
+}
+
+.l-header-nav__list a::before {
+  @include pc {
+   content: '';
+   width: 100%;
+   height: 0.2rem;
+   background-color: #000;
+   position: absolute;
+   left: 0;
+   bottom: 2.5rem;
+   transform: scaleX(0);
+   transform-origin: left;
+   transition: transform .4s;
+ }
+}
+
+.l-header-nav__list a:hover::before {
+  transform: scaleX(1);
+}
+
+
+.c-btn {
+ background-color: $color-red;
+ color: #fff; 
+ border: 0.1rem solid transparent;
+ transition: background-color .4s, color .4s, border .4s;
+}
+
+.c-btn:hover {
+ background-color: #fff;
+ color: $color-red; 
+ border: 0.1rem solid $color-red;
+}
+
+.c-btn--header {
+ padding: 1.7rem 3rem 1.7rem;
+ font-size: 1.5rem;
+ line-height: 1;
+}
